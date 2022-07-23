@@ -1,12 +1,10 @@
 export const UserDetails = ({
-
+    onClose,
     user,
-    onClose
-}
-) => {
+}) => {
     return (
         <div className="overlay">
-            <div className="backdrop" onClick={onClose}/>
+            <div className="backdrop" onClick={onClose} />
             <div className="modal">
                 <div className="detail-container">
                     <header className="headers">
@@ -45,10 +43,9 @@ export const UserDetails = ({
                 </div>
             </div>
         </div>
-
-    )
+    );
 }
 
 function printAddress(data) {
-    return `${data.country}, ${data.city}, ${data.street}, ${data.streetNumber}`
+    return `${data.country}, ${data.city}, ${data.street} ${data.streetNumber}`;
 }
